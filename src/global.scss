@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis/com/css?family=Montserrat:400,700');
+
+$primary: #017FAF;
+
+body, html{
+    margin: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    background:  #f7f7f7;
+    grid-template-areas:
+     "iface";
+     font-family: 'Montserrat', sans-serif;
+     align-items: center;
+}
+
+a{
+    color: $primary;
+    text-decoration: none;
+}
+
+p{
+    line-height: 25px;
+}
+
+#app{
+    grid-area: iface;
+    width: 90%;
+    max-width: 1500px;
+    height: 90%;
+
+    .container{
+        background: #FFF;
+        box-shadow: 15px 15px 40px lightgray;
+        overflow: hidden;
+        height: 100%;
+
+        .inner{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+
+            .nav{
+                display: grid;
+                grid-template-columns: 200px auto;
+                grid-template-areas: 
+                "logo nav";
+                padding: 50px;
+                position: absolute;
+                z-index: 4;
+                width: 92%;
+
+                #logo{
+                    grid-area: logo;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                ul{
+                    grid-area: nav;
+                    list-style: none;
+                    justify-self: right;
+                    margin: 0;
+
+                    li{
+                        display: inline;
+
+                        a{
+                            color: #000;
+                            font-size: 7em;
+                            text-transform: uppercase;
+                            pad: 0 15px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+.main-content{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 42% auto;
+    grid-template-areas: left right;
+
+    .left-content{
+        padding: 100px 50px 15px 50px;
+    }
+
+    .right-content{
+        background: #d6d6d6;
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+        align-items: center
+    }
+}
+
